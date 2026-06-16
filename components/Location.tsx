@@ -51,12 +51,26 @@ export default function Location() {
             boxShadow: '0 16px 60px rgba(45,5,5,0.1)',
           }}
         >
-          {/* Visual map pin section — dark red */}
+          {/* Venue image section with overlay */}
           <div
             className="relative h-56 md:h-72 flex flex-col items-center justify-center overflow-hidden"
-            style={{ background: 'linear-gradient(135deg, #5C0E0E 0%, #2D0505 100%)' }}
+            style={{ background: '#2D0505' }}
           >
-            <IslamicPattern opacity={0.075} color="#C9A84C" id="location-card-pattern" />
+            {/* Venue / wedding hall stock image */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=75"
+              alt="Wedding venue"
+              className="absolute inset-0 w-full h-full object-cover opacity-35"
+              loading="lazy"
+            />
+
+            {/* Dark crimson gradient overlay */}
+            <div className="absolute inset-0" style={{
+              background: 'linear-gradient(135deg, rgba(92,14,14,0.72) 0%, rgba(45,5,5,0.85) 100%)',
+            }} />
+
+            <IslamicPattern opacity={0.06} color="#C9A84C" id="location-card-pattern" />
 
             <div className="absolute inset-0 pointer-events-none" style={{
               background: 'radial-gradient(ellipse 50% 60% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 65%)',

@@ -7,44 +7,50 @@ import IslamicPattern from './IslamicPattern'
 const IMAGES = [
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1573821663912-569905455b1c?auto=format&fit=crop&w=600&q=80',
-    alt: 'Beautiful mosque architecture at golden hour',
-    label: 'Sacred Space',
-    tall: false,
-  },
-  {
-    id: 2,
+    // Henna/mehndi art close-up — no faces
     src: 'https://images.unsplash.com/photo-1583394388681-5d8d4a5e3e1a?auto=format&fit=crop&w=600&q=80',
-    alt: 'Intricate bridal mehndi henna art on hands',
-    label: 'Henna Blessing',
+    alt: 'Intricate bridal mehndi henna design art',
+    label: 'Mehndi',
     tall: true,
   },
   {
+    id: 2,
+    // Decorated wedding hall / venue interior
+    src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=80',
+    alt: 'Elegantly decorated wedding reception hall',
+    label: 'The Venue',
+    tall: false,
+  },
+  {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=600&q=80',
-    alt: 'White roses bridal bouquet',
-    label: 'Pure Love',
+    // Floral arch / wedding stage flower wall
+    src: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=600&q=80',
+    alt: 'Beautiful floral arch wedding stage decoration',
+    label: 'Floral Arch',
     tall: false,
   },
   {
     id: 4,
-    src: 'https://images.unsplash.com/photo-1565793688891-c1d73d0ff7c3?auto=format&fit=crop&w=600&q=80',
-    alt: 'Islamic geometric tile art and patterns',
-    label: 'Sacred Geometry',
+    // White rose bridal flowers — no people
+    src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=600&q=80',
+    alt: 'White roses wedding floral arrangement',
+    label: 'Bridal Blooms',
     tall: false,
   },
   {
     id: 5,
-    src: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80',
-    alt: 'Elegant wedding candles and floral decor',
-    label: 'Eternal Flame',
+    // Decorated wedding aisle with rose petals and candles
+    src: 'https://images.unsplash.com/photo-1604600114-dbc3d7e77d10?auto=format&fit=crop&w=600&q=80',
+    alt: 'Decorated nikah ceremony aisle with candles and petals',
+    label: 'The Aisle',
     tall: true,
   },
   {
     id: 6,
+    // Wedding venue / mandap with fairy lights
     src: 'https://images.unsplash.com/photo-1537530874679-35c73a1a73cd?auto=format&fit=crop&w=600&q=80',
-    alt: 'Lush floral wedding decoration arrangement',
-    label: 'In Full Bloom',
+    alt: 'Wedding venue decorated with lights and florals',
+    label: 'Golden Eve',
     tall: false,
   },
 ]

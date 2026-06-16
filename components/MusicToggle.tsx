@@ -28,8 +28,21 @@ export default function MusicToggle() {
 
   return (
     <>
-      {/* Place nasheed.mp3 in public/music/ to enable background audio */}
-      <audio ref={audioRef} loop src="/music/nasheed.mp3" preload="none" />
+      {/*
+        Primary source: drop your own MP3 at public/music/nasheed.mp3
+        Fallback: free public-domain nasheed "Tala al-Badru Alayna" via Archive.org
+      */}
+      <audio ref={audioRef} loop preload="none">
+        <source src="/music/nasheed.mp3" type="audio/mpeg" />
+        <source
+          src="https://archive.org/download/TalaAlBadruAlaynaIllu/Tala%20Al%20Badru%20Alayna%20Illu.mp3"
+          type="audio/mpeg"
+        />
+        <source
+          src="https://archive.org/download/MuhammedMukhtar/01TalaAlBadrAlaynaIllu.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
 
       <AnimatePresence>
         {visible && (
