@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Custom Properties ─── */
+:root {
+  --ivory: #faf7f0;
+  --cream: #fff5f0;
+  --gold: #c9a84c;
+  --gold-light: #d4af37;
+  --gold-bright: #f0d060;
+  --crimson-deep: #2d0505;
+  --crimson: #5c0e0e;
+  --crimson-light: #8b1a1a;
+}
+
+/* ─── Base ─── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--ivory);
+  font-family: var(--font-inter), sans-serif;
+  color: #1c1c1c;
+}
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--crimson-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-bright);
+}
+
+/* ─── Utility Classes ─── */
+@layer components {
+  .gold-text {
+    background: linear-gradient(135deg, #c9a84c 0%, #f0d060 40%, #d4af37 70%, #c9a84c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gold-text-shimmer {
+    background: linear-gradient(
+      90deg,
+      #c9a84c 0%,
+      #f0d060 25%,
+      #c9a84c 50%,
+      #f0d060 75%,
+      #c9a84c 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+  }
+
+  .glass-dark {
+    background: rgba(45, 5, 5, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(201, 168, 76, 0.25);
+  }
+
+  .glass-light {
+    background: rgba(255, 248, 245, 0.72);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(201, 168, 76, 0.3);
+  }
+
+  .arabic-text {
+    font-family: var(--font-amiri), serif;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    line-height: 2;
+  }
+
+  .ornament-line {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .ornament-line::before,
+  .ornament-line::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.55), transparent);
+  }
+
+  .wedding-input {
+    background: transparent;
+    border: 1px solid rgba(201, 168, 76, 0.35);
+    color: #1c1c1c;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    font-family: var(--font-cormorant), serif;
+    font-size: 1.125rem;
+  }
+  .wedding-input:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
+  }
+  .wedding-input::placeholder {
+    color: rgba(80, 20, 20, 0.38);
+  }
+}
+
+/* ─── Keyframes ─── */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes pulseGold {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+
+/* ─── Text Selection ─── */
+::selection {
+  background: rgba(201, 168, 76, 0.22);
+  color: #2d0505;
+}
