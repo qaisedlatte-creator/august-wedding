@@ -25,19 +25,19 @@ export default function ClientWrapper() {
       <LoadingScreen onComplete={onComplete} />
       {isLoaded && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.85, ease: 'easeOut' }}
+          initial={{ opacity: 0, filter: 'blur(10px)' }}
+          animate={{ opacity: 1, filter: 'blur(0px)' }}
+          transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
         >
           <ScrollProgress />
           <main>
             <Hero />
             <ParentsSection />
             <WeddingDetails />
+            <Countdown />
             <LoveStory />
             <EventInfo />
             <Location />
-            <Countdown />
             <Blessings />
             <Footer />
           </main>

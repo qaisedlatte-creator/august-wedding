@@ -128,10 +128,10 @@ export default function LoadingScreen({ onComplete }: Props) {
                 <rect x="12" y="10" width="356" height="233" fill="none" stroke="rgba(201,168,76,0.12)" strokeWidth="0.7"/>
               </svg>
 
-              {/* ── Wax seal (z: 10, revealed when flap opens) ── */}
+              {/* ── Wax seal sits on top of flap (bridges flap + body like a real wax seal) ── */}
               <div
                 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-                style={{ zIndex: 10 }}
+                style={{ zIndex: 30 }}
               >
                 <WaxSeal />
               </div>
