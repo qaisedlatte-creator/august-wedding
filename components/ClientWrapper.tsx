@@ -8,12 +8,10 @@ import Hero from './Hero'
 import ParentsSection from './ParentsSection'
 import WeddingDetails from './WeddingDetails'
 import LoveStory from './LoveStory'
-import WeddingGallery from './WeddingGallery'
 import EventInfo from './EventInfo'
 import Location from './Location'
 import Countdown from './Countdown'
 import Blessings from './Blessings'
-import RSVP from './RSVP'
 import Footer from './Footer'
 import MusicToggle from './MusicToggle'
 import FloatingButtons from './FloatingButtons'
@@ -37,12 +35,10 @@ export default function ClientWrapper() {
             <ParentsSection />
             <WeddingDetails />
             <LoveStory />
-            <WeddingGallery />
             <EventInfo />
             <Location />
             <Countdown />
             <Blessings />
-            <RSVP />
             <Footer />
           </main>
           <MusicToggle />

@@ -57,22 +57,10 @@ function WaxSeal({ onClick }: { onClick: () => void }) {
             strokeWidth="0.9"
             opacity="0.4"
           />
-          {/* Islamic 8-pointed star — centered via translate */}
+          {/* Diamond lattice — elegant geometric motif */}
           <g transform="translate(28,28) scale(1.1)">
-            <polygon
-              points="40,8 45,27 63,17 53,35 72,40 53,45 63,63 45,53 40,72 35,53 17,63 27,45 8,40 27,35 17,17 35,27"
-              fill="none"
-              stroke="#C9A84C"
-              strokeWidth="1.1"
-              opacity="0.62"
-            />
-            <polygon
-              points="53,35 63,40 53,45 40,53 27,45 17,40 27,35 40,27"
-              fill="none"
-              stroke="#C9A84C"
-              strokeWidth="0.6"
-              opacity="0.38"
-            />
+            <path d="M40,10 L70,40 L40,70 L10,40 Z" fill="none" stroke="#C9A84C" strokeWidth="1.1" opacity="0.65"/>
+            <path d="M40,25 L55,40 L40,55 L25,40 Z" fill="none" stroke="#C9A84C" strokeWidth="0.7" opacity="0.42"/>
             <circle cx="40" cy="40" r="5.5" fill="none" stroke="#C9A84C" strokeWidth="0.7" opacity="0.35" />
             <circle cx="40" cy="40" r="2.2" fill="#C9A84C" opacity="0.38" />
           </g>

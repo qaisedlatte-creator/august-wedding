@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { MapPin, Heart } from 'lucide-react'
+import { MapPin } from 'lucide-react'
 
 export default function FloatingButtons() {
   const [visible, setVisible] = useState(false)
@@ -16,7 +16,6 @@ export default function FloatingButtons() {
   }, [])
 
   const buttons = [
-    { href: '#rsvp', icon: Heart, label: 'RSVP', fill: true },
     { href: '#location', icon: MapPin, label: 'VENUE', fill: false },
   ]
 

@@ -24,39 +24,38 @@ export default function IslamicPattern({
             id={id}
             x="0"
             y="0"
-            width="80"
-            height="80"
+            width="64"
+            height="64"
             patternUnits="userSpaceOnUse"
           >
-            {/* 8-pointed star — geometric Islamic motif */}
-            <g stroke={color} fill="none">
-              <polygon
-                points="40,8 45,27 63,17 53,35 72,40 53,45 63,63 45,53 40,72 35,53 17,63 27,45 8,40 27,35 17,17 35,27"
-                strokeWidth="0.8"
-                opacity={opacity}
-              />
-              {/* Inner octagon */}
-              <polygon
-                points="53,35 63,40 53,45 40,53 27,45 17,40 27,35 40,27"
-                strokeWidth="0.5"
-                opacity={opacity * 0.75}
-              />
-              {/* Center diamond */}
-              <rect
-                x="36"
-                y="36"
-                width="8"
-                height="8"
-                transform="rotate(45, 40, 40)"
-                strokeWidth="0.5"
-                opacity={opacity * 0.6}
-              />
-            </g>
-            {/* Tile corner dots for continuity */}
-            <circle cx="0"  cy="0"  r="1.5" fill={color} opacity={opacity * 0.4} />
-            <circle cx="80" cy="0"  r="1.5" fill={color} opacity={opacity * 0.4} />
-            <circle cx="0"  cy="80" r="1.5" fill={color} opacity={opacity * 0.4} />
-            <circle cx="80" cy="80" r="1.5" fill={color} opacity={opacity * 0.4} />
+            {/* Outer diamond */}
+            <path
+              d="M32,5 L59,32 L32,59 L5,32 Z"
+              stroke={color}
+              fill="none"
+              strokeWidth="0.75"
+              opacity={opacity}
+            />
+            {/* Inner diamond */}
+            <path
+              d="M32,18 L46,32 L32,46 L18,32 Z"
+              stroke={color}
+              fill="none"
+              strokeWidth="0.5"
+              opacity={opacity * 0.72}
+            />
+            {/* Center dot */}
+            <circle cx="32" cy="32" r="1.8" fill={color} opacity={opacity * 0.55} />
+            {/* Corner connector dots */}
+            <circle cx="0"  cy="0"  r="1.4" fill={color} opacity={opacity * 0.38} />
+            <circle cx="64" cy="0"  r="1.4" fill={color} opacity={opacity * 0.38} />
+            <circle cx="0"  cy="64" r="1.4" fill={color} opacity={opacity * 0.38} />
+            <circle cx="64" cy="64" r="1.4" fill={color} opacity={opacity * 0.38} />
+            {/* Midpoint edge dots */}
+            <circle cx="32" cy="0"  r="1"   fill={color} opacity={opacity * 0.28} />
+            <circle cx="32" cy="64" r="1"   fill={color} opacity={opacity * 0.28} />
+            <circle cx="0"  cy="32" r="1"   fill={color} opacity={opacity * 0.28} />
+            <circle cx="64" cy="32" r="1"   fill={color} opacity={opacity * 0.28} />
           </pattern>
         </defs>
         <rect width="100%" height="100%" fill={`url(#${id})`} />

@@ -13,22 +13,10 @@ function Spinning3DMedallion() {
         style={{ transformStyle: 'preserve-3d' }}
       >
         <svg viewBox="0 0 80 80" width="70" height="70" xmlns="http://www.w3.org/2000/svg">
-          {/* Outer 8-pointed star */}
-          <polygon
-            points="40,8 45,27 63,17 53,35 72,40 53,45 63,63 45,53 40,72 35,53 17,63 27,45 8,40 27,35 17,17 35,27"
-            fill="none"
-            stroke="#C9A84C"
-            strokeWidth="1"
-            opacity="0.6"
-          />
-          {/* Inner octagon */}
-          <polygon
-            points="53,35 63,40 53,45 40,53 27,45 17,40 27,35 40,27"
-            fill="none"
-            stroke="#C9A84C"
-            strokeWidth="0.7"
-            opacity="0.45"
-          />
+          {/* Outer diamond */}
+          <path d="M40,8 L72,40 L40,72 L8,40 Z" fill="none" stroke="#C9A84C" strokeWidth="0.9" opacity="0.55"/>
+          {/* Inner diamond */}
+          <path d="M40,22 L58,40 L40,58 L22,40 Z" fill="none" stroke="#C9A84C" strokeWidth="0.65" opacity="0.38"/>
           {/* Center */}
           <circle cx="40" cy="40" r="6" fill="none" stroke="#C9A84C" strokeWidth="0.6" opacity="0.4" />
           <circle cx="40" cy="40" r="3" fill="#C9A84C" opacity="0.35" />

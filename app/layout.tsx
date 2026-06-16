@@ -1,24 +1,23 @@
 import type { Metadata, Viewport } from 'next'
 import {
+  Gilda_Display,
   Cormorant_Garamond,
-  Playfair_Display,
   Great_Vibes,
   Amiri,
-  Inter,
+  Josefin_Sans,
 } from 'next/font/google'
 import './globals.css'
 
-const cormorant = Cormorant_Garamond({
+const cormorant = Gilda_Display({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  style: ['normal', 'italic'],
+  weight: ['400'],
   variable: '--font-cormorant',
   display: 'swap',
 })
 
-const playfair = Playfair_Display({
+const playfair = Cormorant_Garamond({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['300', '400', '500', '600', '700'],
   style: ['normal', 'italic'],
   variable: '--font-playfair',
   display: 'swap',
@@ -39,8 +38,9 @@ const amiri = Amiri({
   display: 'swap',
 })
 
-const inter = Inter({
+const inter = Josefin_Sans({
   subsets: ['latin'],
+  weight: ['100', '300', '400'],
   variable: '--font-inter',
   display: 'swap',
 })

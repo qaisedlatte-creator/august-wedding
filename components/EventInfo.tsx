@@ -104,7 +104,7 @@ export default function EventInfo() {
           </motion.p>
 
           <motion.h2 variants={fadeUp} className="font-cormorant font-light" style={{ fontSize: 'clamp(2.5rem, 7vw, 4.5rem)', color: '#FAF7F0', lineHeight: 1.1 }}>
-            Nikah Ceremony
+            Wedding Ceremony
           </motion.h2>
 
           <motion.div variants={fadeUp} className="flex items-center justify-center gap-3 my-7">
@@ -136,7 +136,7 @@ export default function EventInfo() {
                 </div>
 
                 <h3 className="font-cormorant font-semibold mb-8" style={{ fontSize: 'clamp(1.4rem, 3.5vw, 2rem)', color: '#FAF7F0', transform: 'translateZ(15px)' }}>
-                  Nikah &amp; Walima Reception
+                  Wedding &amp; Walima Reception
                 </h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8" style={{ transform: 'translateZ(10px)' }}>
