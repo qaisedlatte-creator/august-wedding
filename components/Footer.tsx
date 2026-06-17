@@ -2,90 +2,58 @@
 
 import { motion } from 'framer-motion'
 import { stagger, fadeUp } from '@/lib/animations'
-import IslamicPattern from './IslamicPattern'
-
-function Spinning3DMedallion() {
-  return (
-    <div style={{ perspective: '600px' }}>
-      <motion.div
-        animate={{ rotateY: 360 }}
-        transition={{ duration: 12, repeat: Infinity, ease: 'linear' }}
-        style={{ transformStyle: 'preserve-3d' }}
-      >
-        <svg viewBox="0 0 80 80" width="70" height="70" xmlns="http://www.w3.org/2000/svg">
-          {/* Outer diamond */}
-          <path d="M40,8 L72,40 L40,72 L8,40 Z" fill="none" stroke="#C9A84C" strokeWidth="0.9" opacity="0.55"/>
-          {/* Inner diamond */}
-          <path d="M40,22 L58,40 L40,58 L22,40 Z" fill="none" stroke="#C9A84C" strokeWidth="0.65" opacity="0.38"/>
-          {/* Center */}
-          <circle cx="40" cy="40" r="6" fill="none" stroke="#C9A84C" strokeWidth="0.6" opacity="0.4" />
-          <circle cx="40" cy="40" r="3" fill="#C9A84C" opacity="0.35" />
-          {/* Outer ring */}
-          <circle cx="40" cy="40" r="36" fill="none" stroke="#C9A84C" strokeWidth="0.5" strokeDasharray="4 4" opacity="0.25" />
-        </svg>
-      </motion.div>
-    </div>
-  )
-}
 
 export default function Footer() {
   return (
     <footer
       id="footer"
-      className="relative py-20 md:py-28 overflow-hidden"
-      style={{ backgroundColor: '#2D0505' }}
+      className="relative py-16 md:py-24 overflow-hidden"
+      style={{ backgroundColor: '#FAF0E4' }}
     >
-      <IslamicPattern opacity={0.09} color="#C9A84C" id="footer-pattern" />
+      {/* Soft parchment shadow at top */}
+      <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(184,144,42,0.3), transparent)' }}/>
 
-      <div className="absolute inset-0 pointer-events-none" style={{
-        background: 'radial-gradient(ellipse 80% 50% at 50% 110%, rgba(201,168,76,0.045) 0%, transparent 60%)',
-      }} />
-      <div className="absolute inset-0 pointer-events-none" style={{
-        background: 'radial-gradient(ellipse 90% 70% at 50% 50%, rgba(139,26,26,0.22) 0%, transparent 70%)',
-      }} />
+      <div className="relative z-10 max-w-lg mx-auto px-6 text-center">
+        <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-40px' }}>
 
-      <div className="relative z-10 max-w-xl mx-auto px-6 text-center">
-        <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-60px' }}>
-          {/* 3D spinning medallion */}
-          <motion.div variants={fadeUp} className="flex justify-center mb-10">
-            <Spinning3DMedallion />
+          {/* Diamond ornament */}
+          <motion.div variants={fadeUp} className="flex items-center justify-center gap-3 mb-10">
+            <div className="h-px w-16" style={{ background: 'linear-gradient(to right, transparent, rgba(184,144,42,0.4))' }}/>
+            <div className="w-2.5 h-2.5 rotate-45" style={{ background: '#B8902A', opacity: 0.5 }}/>
+            <div className="h-px w-16" style={{ background: 'linear-gradient(to left, transparent, rgba(184,144,42,0.4))' }}/>
           </motion.div>
 
-          <motion.p variants={fadeUp} className="font-cormorant tracking-[0.3em] text-xs uppercase mb-4" style={{ color: 'rgba(201,168,76,0.58)' }}>
+          <motion.p variants={fadeUp} className="font-inter tracking-[0.3em] text-xs uppercase mb-4" style={{ color: 'rgba(61,10,10,0.45)', fontWeight: 300 }}>
             With Love
           </motion.p>
 
-          <motion.div variants={fadeUp} className="text-3xl mb-6" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}>
-            ❤️
-          </motion.div>
-
-          <motion.p variants={fadeUp} className="font-cormorant font-light tracking-wide" style={{ fontSize: 'clamp(1.4rem, 4vw, 2.2rem)', color: '#FAF7F0' }}>
+          <motion.p variants={fadeUp} className="font-cormorant" style={{ fontSize: 'clamp(1.3rem, 4vw, 2rem)', color: '#3D0A0A', fontWeight: 400 }}>
             Unais Ibrahim C.K
           </motion.p>
 
           <motion.div variants={fadeUp} className="my-3">
-            <span className="font-vibes" style={{ fontSize: 'clamp(2.5rem, 6vw, 3.5rem)', color: '#C9A84C' }}>&amp;</span>
+            <span className="font-vibes" style={{ fontSize: 'clamp(2.2rem, 5.5vw, 3rem)', color: '#B8902A' }}>&amp;</span>
           </motion.div>
 
-          <motion.p variants={fadeUp} className="font-cormorant font-light tracking-wide" style={{ fontSize: 'clamp(1.4rem, 4vw, 2.2rem)', color: '#FAF7F0' }}>
+          <motion.p variants={fadeUp} className="font-cormorant" style={{ fontSize: 'clamp(1.3rem, 4vw, 2rem)', color: '#3D0A0A', fontWeight: 400 }}>
             Nasma Sherin V
           </motion.p>
 
           <motion.div variants={fadeUp} className="flex items-center justify-center gap-3 my-8">
-            <div className="h-px w-20" style={{ background: 'linear-gradient(to right, transparent, rgba(201,168,76,0.4))' }} />
-            <span style={{ color: '#C9A84C', fontSize: '8px' }}>✦</span>
-            <div className="h-px w-20" style={{ background: 'linear-gradient(to left, transparent, rgba(201,168,76,0.4))' }} />
+            <div className="h-px w-16" style={{ background: 'linear-gradient(to right, transparent, rgba(184,144,42,0.4))' }}/>
+            <div className="w-2 h-2 rotate-45" style={{ background: '#B8902A', opacity: 0.45 }}/>
+            <div className="h-px w-16" style={{ background: 'linear-gradient(to left, transparent, rgba(184,144,42,0.4))' }}/>
           </motion.div>
 
-          <motion.p variants={fadeUp} className="font-cormorant tracking-[0.28em] text-sm uppercase" style={{ color: 'rgba(201,168,76,0.58)' }}>
+          <motion.p variants={fadeUp} className="font-inter tracking-[0.28em] text-sm uppercase" style={{ color: 'rgba(61,10,10,0.45)', fontWeight: 300, fontSize: '0.7rem' }}>
             09 · August · 2026
           </motion.p>
 
-          <motion.p variants={fadeUp} className="arabic-text mt-6" style={{ fontSize: '1.05rem', color: 'rgba(201,168,76,0.42)' }}>
+          <motion.p variants={fadeUp} className="arabic-text mt-6" style={{ fontSize: '0.98rem', color: 'rgba(139,26,26,0.4)' }}>
             بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
           </motion.p>
 
-          <motion.p variants={fadeUp} className="font-inter mt-10 tracking-wide" style={{ fontSize: '0.7rem', color: 'rgba(250,247,240,0.18)' }}>
+          <motion.p variants={fadeUp} className="font-inter mt-10 tracking-wide" style={{ fontSize: '0.62rem', color: 'rgba(61,10,10,0.22)', fontWeight: 300 }}>
             Made with love · {new Date().getFullYear()}
           </motion.p>
         </motion.div>

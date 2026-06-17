@@ -73,10 +73,18 @@ body {
   }
 
   .glass-light {
-    background: rgba(255, 248, 245, 0.72);
+    background: rgba(255, 244, 232, 0.88);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(201, 168, 76, 0.3);
+  }
+
+  /* Invytor-style floating card */
+  .invite-card {
+    background: rgba(255, 244, 232, 0.92);
+    border-radius: 18px;
+    border: 1px solid rgba(184, 144, 42, 0.2);
+    box-shadow: 0 4px 32px rgba(100, 30, 10, 0.07), 0 1px 8px rgba(100, 30, 10, 0.04);
   }
 
   .arabic-text {

@@ -3,7 +3,6 @@
 import { useState, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Calendar, Clock } from 'lucide-react'
-import IslamicPattern from './IslamicPattern'
 import { stagger, fadeUp } from '@/lib/animations'
 import { useConfetti, ConfettiRenderer } from './Confetti'
 
@@ -124,25 +123,9 @@ export default function WeddingDetails() {
     <section
       id="details"
       className="relative py-24 md:py-36 overflow-hidden"
-      style={{ backgroundColor: '#4A0A0A' }}
+      style={{ backgroundColor: '#FAF0E4' }}
     >
-      <IslamicPattern opacity={0.075} color="#C9A84C" id="details-pattern" />
       <ConfettiRenderer particles={particles} />
-
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            'radial-gradient(ellipse 55% 45% at 50% 50%, rgba(201,168,76,0.045) 0%, transparent 65%)',
-        }}
-      />
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(139,26,26,0.2) 0%, transparent 70%)',
-        }}
-      />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <motion.div
@@ -162,8 +145,8 @@ export default function WeddingDetails() {
 
           <motion.h2
             variants={fadeUp}
-            className="font-cormorant font-light"
-            style={{ fontSize: 'clamp(2.5rem, 7vw, 5rem)', color: '#FAF7F0', lineHeight: 1 }}
+            className="font-cormorant"
+            style={{ fontSize: 'clamp(2.5rem, 7vw, 5rem)', color: '#3D0A0A', lineHeight: 1, fontWeight: 400 }}
           >
             Wedding Day
           </motion.h2>
@@ -212,36 +195,29 @@ export default function WeddingDetails() {
 
                 {/* Date block */}
                 <div className="flex-1 relative z-10">
-                  <div
-                    className="inline-block md:block p-8 md:p-10"
-                    style={{
-                      background: 'rgba(30,3,3,0.65)',
-                      border: '1px solid rgba(201,168,76,0.18)',
-                      backdropFilter: 'blur(16px)',
-                    }}
-                  >
-                    <IconBox><Calendar size={20} color="#C9A84C" /></IconBox>
+                  <div className="invite-card inline-block md:block p-8 md:p-10">
+                    <IconBox><Calendar size={20} color="#B8902A" /></IconBox>
                     <p
-                      className="font-cormorant tracking-[0.22em] text-xs uppercase mb-3"
-                      style={{ color: 'rgba(201,168,76,0.6)' }}
+                      className="font-inter tracking-[0.28em] text-xs uppercase mb-3"
+                      style={{ color: 'rgba(184,144,42,0.7)', fontWeight: 300 }}
                     >
                       Date
                     </p>
                     <p
-                      className="font-cormorant font-light"
-                      style={{ fontSize: 'clamp(1.3rem, 3.5vw, 2rem)', color: '#FAF7F0' }}
+                      className="font-playfair italic"
+                      style={{ fontSize: 'clamp(1.2rem, 3.5vw, 1.7rem)', color: '#3D0A0A' }}
                     >
                       Sunday
                     </p>
                     <p
-                      className="font-cormorant font-semibold leading-none"
-                      style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', color: '#D4AF37' }}
+                      className="font-cormorant leading-none"
+                      style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', color: '#8B1A1A', fontWeight: 400 }}
                     >
                       09
                     </p>
                     <p
-                      className="font-cormorant font-light tracking-widest"
-                      style={{ fontSize: 'clamp(1rem, 2.5vw, 1.5rem)', color: '#FAF7F0' }}
+                      className="font-playfair tracking-widest"
+                      style={{ fontSize: 'clamp(1rem, 2.5vw, 1.4rem)', color: '#3D0A0A' }}
                     >
                       August 2026
                     </p>
@@ -258,36 +234,29 @@ export default function WeddingDetails() {
 
                 {/* Time block */}
                 <div className="flex-1 relative z-10">
-                  <div
-                    className="inline-block md:block p-8 md:p-10"
-                    style={{
-                      background: 'rgba(30,3,3,0.65)',
-                      border: '1px solid rgba(201,168,76,0.18)',
-                      backdropFilter: 'blur(16px)',
-                    }}
-                  >
-                    <IconBox><Clock size={20} color="#C9A84C" /></IconBox>
+                  <div className="invite-card inline-block md:block p-8 md:p-10">
+                    <IconBox><Clock size={20} color="#B8902A" /></IconBox>
                     <p
-                      className="font-cormorant tracking-[0.22em] text-xs uppercase mb-3"
-                      style={{ color: 'rgba(201,168,76,0.6)' }}
+                      className="font-inter tracking-[0.28em] text-xs uppercase mb-3"
+                      style={{ color: 'rgba(184,144,42,0.7)', fontWeight: 300 }}
                     >
                       Time
                     </p>
                     <p
-                      className="font-cormorant font-semibold"
-                      style={{ fontSize: 'clamp(2rem, 5.5vw, 3.5rem)', color: '#D4AF37' }}
+                      className="font-playfair italic"
+                      style={{ fontSize: 'clamp(2rem, 5.5vw, 3.2rem)', color: '#8B1A1A' }}
                     >
                       11:00 AM
                     </p>
                     <p
-                      className="font-cormorant font-light my-1"
-                      style={{ fontSize: '1rem', color: 'rgba(250,247,240,0.4)' }}
+                      className="font-playfair italic my-1"
+                      style={{ fontSize: '0.9rem', color: 'rgba(61,10,10,0.4)' }}
                     >
                       until
                     </p>
                     <p
-                      className="font-cormorant font-semibold"
-                      style={{ fontSize: 'clamp(2rem, 5.5vw, 3.5rem)', color: '#D4AF37' }}
+                      className="font-playfair italic"
+                      style={{ fontSize: 'clamp(2rem, 5.5vw, 3.2rem)', color: '#8B1A1A' }}
                     >
                       2:30 PM
                     </p>
