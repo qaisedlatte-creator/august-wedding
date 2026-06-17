@@ -31,17 +31,15 @@ export default function ClientWrapper() {
           style={{ position: 'relative' }}
         >
           {/* Fixed botanical illustration — persists behind every section */}
-          <div
-            style={{
-              position: 'fixed',
-              top: 0, left: 0, right: 0, bottom: 0,
-              zIndex: -1,
-              backgroundImage: "url('/wedding-bg.png')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center top',
-              backgroundRepeat: 'no-repeat',
-            }}
-          />
+          <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: -1, overflow: 'hidden' }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/wedding-bg.png"
+              alt=""
+              aria-hidden="true"
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
+            />
+          </div>
           <ScrollProgress />
           <main>
             <Hero />
