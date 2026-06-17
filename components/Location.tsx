@@ -8,7 +8,7 @@ const MAPS_URL = 'https://share.google/H1FapEGfpm4LwrETW'
 
 export default function Location() {
   return (
-    <section id="location" className="relative py-10 md:py-16 overflow-hidden" style={{ backgroundColor: '#FAF0E4' }}>
+    <section id="location" className="relative py-10 md:py-16 overflow-hidden" style={{ backgroundColor: 'transparent' }}>
       <div className="relative z-10 max-w-2xl mx-auto px-6 md:px-12">
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-60px' }}>
 

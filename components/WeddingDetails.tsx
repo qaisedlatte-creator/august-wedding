@@ -79,7 +79,7 @@ function WaxSeal({ onClick }: { onClick: () => void }) {
       {/* Pulsing hint text */}
       <motion.p
         className="font-playfair italic"
-        style={{ fontSize: '0.9rem', color: 'rgba(250,247,240,0.48)' }}
+        style={{ fontSize: '0.9rem', color: 'rgba(61,10,10,0.55)' }}
         animate={{ opacity: [0.38, 0.85, 0.38] }}
         transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
       >
@@ -123,7 +123,7 @@ export default function WeddingDetails() {
     <section
       id="details"
       className="relative py-24 md:py-36 overflow-hidden"
-      style={{ backgroundColor: '#FAF0E4' }}
+      style={{ backgroundColor: 'transparent' }}
     >
       <ConfettiRenderer particles={particles} />
 

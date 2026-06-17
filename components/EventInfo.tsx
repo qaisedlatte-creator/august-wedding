@@ -22,7 +22,7 @@ function MosqueIcon() {
 
 export default function EventInfo() {
   return (
-    <section id="event" className="relative py-10 md:py-16 overflow-hidden" style={{ backgroundColor: '#FAF0E4' }}>
+    <section id="event" className="relative py-10 md:py-16 overflow-hidden" style={{ backgroundColor: 'transparent' }}>
       <div className="relative z-10 max-w-2xl mx-auto px-6 md:px-12">
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-60px' }}>
           <motion.div variants={scaleIn} className="invite-card p-8 md:p-12 text-center relative">

@@ -8,7 +8,7 @@ export default function Footer() {
     <footer
       id="footer"
       className="relative py-16 md:py-24 overflow-hidden"
-      style={{ backgroundColor: '#FAF0E4' }}
+      style={{ backgroundColor: 'rgba(250,240,228,0.88)', backdropFilter: 'blur(8px)' }}
     >
       {/* Soft parchment shadow at top */}
       <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(184,144,42,0.3), transparent)' }}/>

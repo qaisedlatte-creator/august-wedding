@@ -54,21 +54,11 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-start overflow-hidden"
     >
-      {/* ── Actual wedding background image ── */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/wedding-bg.png"
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full"
-        style={{ objectFit: 'cover', objectPosition: 'center top' }}
-      />
-
-      {/* Very subtle darkening in the middle content area for text readability */}
+      {/* Subtle overlay so text stays readable over the illustrated arch */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 55% 60% at 50% 42%, rgba(245,230,205,0.12) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 60% 65% at 50% 38%, rgba(255,248,240,0.18) 0%, transparent 72%)',
         }}
       />
 

@@ -5,7 +5,7 @@ import { stagger, fadeUp } from '@/lib/animations'
 
 export default function LoveStory() {
   return (
-    <section id="love-story" className="relative py-10 md:py-16 overflow-hidden" style={{ backgroundColor: '#FAF0E4' }}>
+    <section id="love-story" className="relative py-10 md:py-16 overflow-hidden" style={{ backgroundColor: 'transparent' }}>
       <div className="relative z-10 max-w-2xl mx-auto px-6 md:px-12">
         <motion.div
           className="invite-card p-8 md:p-12 text-center relative"

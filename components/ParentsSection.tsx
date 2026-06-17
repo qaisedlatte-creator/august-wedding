@@ -81,7 +81,7 @@ export default function ParentsSection() {
     <section
       id="parents"
       className="relative py-16 md:py-24 overflow-hidden"
-      style={{ backgroundColor: '#FAF0E4' }}
+      style={{ backgroundColor: 'transparent' }}
     >
       <div className="relative z-10 max-w-2xl mx-auto px-6 md:px-12">
         <SectionHeader label="With the Blessings of" title="Our Beloved Families" />
