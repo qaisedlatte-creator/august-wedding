@@ -92,7 +92,7 @@ function Tilt3DParentCard({ role, name, relation, parent1, parent2, slideVariant
         <div
           className="relative p-8 md:p-10 text-center h-full"
           style={{
-            background: 'rgba(255,248,245,0.82)',
+            background: 'rgba(255,244,232,0.88)',
             backdropFilter: 'blur(20px)',
             WebkitBackdropFilter: 'blur(20px)',
             border: '1px solid rgba(201,168,76,0.28)',
@@ -137,7 +137,7 @@ export default function ParentsSection() {
     <section
       id="parents"
       className="relative py-24 md:py-36 overflow-hidden"
-      style={{ backgroundColor: '#FAF7F0' }}
+      style={{ backgroundColor: '#FAF0E4' }}
     >
       <IslamicPattern opacity={0.042} color="#C9A84C" id="parents-pattern" />
 

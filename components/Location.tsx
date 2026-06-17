@@ -19,7 +19,7 @@ export default function Location() {
     <section
       id="location"
       className="relative py-24 md:py-36 overflow-hidden"
-      style={{ backgroundColor: '#FAF7F0' }}
+      style={{ backgroundColor: '#FAF0E4' }}
     >
       <IslamicPattern opacity={0.038} color="#C9A84C" id="location-pattern" />
 

@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import {
-  Gilda_Display,
+  Cinzel,
   Cormorant_Garamond,
   Great_Vibes,
   Amiri,
@@ -8,9 +8,9 @@ import {
 } from 'next/font/google'
 import './globals.css'
 
-const cormorant = Gilda_Display({
+const cormorant = Cinzel({
   subsets: ['latin'],
-  weight: ['400'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-cormorant',
   display: 'swap',
 })

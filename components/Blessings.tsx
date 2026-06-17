@@ -21,7 +21,7 @@ export default function Blessings() {
     <section
       id="blessings"
       className="relative py-28 md:py-44 overflow-hidden"
-      style={{ backgroundColor: '#FFF5F0' }}
+      style={{ backgroundColor: '#FAF0E4' }}
     >
       <IslamicPattern opacity={0.038} color="#C9A84C" id="blessings-pattern" />
 

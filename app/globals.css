@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  background-color: var(--ivory);
+  background-color: #FAF0E4;
   font-family: var(--font-inter), sans-serif;
   color: #1c1c1c;
 }
