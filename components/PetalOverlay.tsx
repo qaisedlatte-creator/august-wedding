@@ -2,11 +2,11 @@
 
 function pr(seed: number) { return ((seed * 9301 + 49297) % 233280) / 233280 }
 
-const PETALS = Array.from({ length: 22 }, (_, i) => ({
-  left:     pr(i * 7 + 1) * 86 + 5,
-  duration: pr(i * 7 + 2) * 10 + 9,
-  delay:   -(pr(i * 7 + 3) * 24),          // negative = already mid-flight on load
-  size:     pr(i * 7 + 4) * 12 + 9,
+const PETALS = Array.from({ length: 38 }, (_, i) => ({
+  left:     pr(i * 7 + 1) * 90 + 3,
+  duration: pr(i * 7 + 2) * 10 + 8,
+  delay:   -(pr(i * 7 + 3) * 26),
+  size:     pr(i * 7 + 4) * 14 + 9,
   drift:   (pr(i * 7 + 5) - 0.5) * 170,
   spin:    (pr(i * 7 + 6) * 440 + 160) * (i % 2 === 0 ? 1 : -1),
   shape:    i % 3,
@@ -29,7 +29,7 @@ export default function PetalOverlay() {
           p.shape === 0 ? '50% 0 50% 0' :
           p.shape === 1 ? '38% 5% 62% 8%' :
           '60% 40% 55% 45%'
-        const col = p.dark ? '#B01414' : '#D02020'
+        const col = p.dark ? '#CC1111' : '#EE1A1A'
         return (
           <div
             key={i}
@@ -40,9 +40,9 @@ export default function PetalOverlay() {
               left: `${p.left}%`,
               width: p.size,
               height: h,
-              background: `radial-gradient(ellipse at 35% 30%, ${col}DD 0%, ${col}66 100%)`,
+              background: `radial-gradient(ellipse at 35% 30%, ${col} 0%, #880808 100%)`,
               borderRadius: br,
-              boxShadow: `inset 0 1px 2px rgba(255,255,255,0.15)`,
+              boxShadow: `inset 0 1px 3px rgba(255,80,80,0.25), 0 2px 6px rgba(140,0,0,0.3)`,
               '--petal-drift': `${p.drift}px`,
               '--petal-spin': `${p.spin}deg`,
               '--petal-dur':   `${p.duration}s`,

@@ -9,7 +9,7 @@ interface Props { onComplete: () => void }
 function pr(seed: number) { return ((seed * 9301 + 49297) % 233280) / 233280 }
 
 // Petals inside loading screen (absolute, not fixed)
-const SCREEN_PETALS = Array.from({ length: 14 }, (_, i) => ({
+const SCREEN_PETALS = Array.from({ length: 20 }, (_, i) => ({
   left:     pr(i * 11 + 1) * 88 + 4,
   duration: pr(i * 11 + 2) * 8 + 7,
   delay:   -(pr(i * 11 + 3) * 16),
@@ -96,7 +96,7 @@ export default function LoadingScreen({ onComplete }: Props) {
           {SCREEN_PETALS.map((p, i) => {
             const h = p.size * (p.shape === 1 ? 0.54 : p.shape === 2 ? 0.70 : 0.65)
             const br = p.shape === 0 ? '50% 0 50% 0' : p.shape === 1 ? '38% 5% 62% 8%' : '60% 40% 55% 45%'
-            const col = p.dark ? '#B01414' : '#D02020'
+            const col = p.dark ? '#CC1111' : '#EE1A1A'
             return (
               <div
                 key={i}
@@ -107,7 +107,7 @@ export default function LoadingScreen({ onComplete }: Props) {
                   left: `${p.left}%`,
                   width: p.size,
                   height: h,
-                  background: `radial-gradient(ellipse at 35% 30%, ${col}CC 0%, ${col}55 100%)`,
+                  background: `radial-gradient(ellipse at 35% 30%, ${col} 0%, #880808 100%)`,
                   borderRadius: br,
                   '--petal-drift': `${p.drift}px`,
                   '--petal-spin': `${p.spin}deg`,
