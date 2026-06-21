@@ -15,6 +15,7 @@ import Blessings from './Blessings'
 import Footer from './Footer'
 import MusicToggle from './MusicToggle'
 import FloatingButtons from './FloatingButtons'
+import PetalOverlay from './PetalOverlay'
 
 export default function ClientWrapper() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -54,6 +55,9 @@ export default function ClientWrapper() {
               }}
             />
           </motion.div>
+
+          {/* Rose petals — fixed sibling so filter:blur on content div doesn't break them */}
+          <PetalOverlay />
 
           {/* Content layer */}
           <motion.div

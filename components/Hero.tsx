@@ -3,51 +3,6 @@
 import { motion } from 'framer-motion'
 import { heroContainer, heroItem } from '@/lib/animations'
 
-function pr(seed: number): number {
-  return ((seed * 9301 + 49297) % 233280) / 233280
-}
-
-/* Falling rose petals — dark crimson */
-const PETALS = Array.from({ length: 28 }, (_, i) => ({
-  id: i,
-  x: pr(i * 7 + 1) * 88 + 6,
-  size: pr(i * 7 + 3) * 13 + 6,
-  duration: pr(i * 7 + 4) * 11 + 13,
-  delay: pr(i * 7 + 5) * 18,
-  drift: (pr(i * 7 + 6) - 0.5) * 110,
-  rotate: pr(i * 7 + 2) * 360,
-  shape: i % 3, // 0: rounded petal, 1: elongated, 2: oval
-}))
-
-function Petal({ x, size, duration, delay, drift, rotate, shape, id }: typeof PETALS[0]) {
-  const borderRadius =
-    shape === 0 ? '50% 0 50% 0' :
-    shape === 1 ? '40% 0 60% 10%' :
-    '60% 40% 60% 40%'
-  return (
-    <motion.div
-      className="absolute pointer-events-none"
-      style={{
-        left: `${x}%`,
-        top: '-3%',
-        width: size,
-        height: size * (shape === 1 ? 0.55 : 0.72),
-        background: `radial-gradient(ellipse at 38% 32%, rgba(${id % 2 === 0 ? '160,20,20' : '130,10,10'},0.82) 0%, rgba(80,3,3,0.55) 100%)`,
-        borderRadius,
-        transform: `rotate(${rotate}deg)`,
-        filter: 'blur(0.3px)',
-      }}
-      animate={{
-        y: ['0vh', '108vh'],
-        x: [0, drift, drift * 0.55, drift * 0.85, drift * 0.25],
-        rotate: [rotate, rotate + 320 * (id % 2 === 0 ? 1 : -1)],
-        opacity: [0, 0.82, 0.65, 0.45, 0],
-      }}
-      transition={{ duration, delay, repeat: Infinity, ease: 'linear' }}
-    />
-  )
-}
-
 export default function Hero() {
   return (
     <section
@@ -61,9 +16,6 @@ export default function Hero() {
           background: 'radial-gradient(ellipse 60% 65% at 50% 38%, rgba(255,248,240,0.18) 0%, transparent 72%)',
         }}
       />
-
-      {/* Falling petals — on top of the background image */}
-      {PETALS.map(p => <Petal key={p.id} {...p} />)}
 
       {/* ── Text content overlaid inside the arch area ── */}
       <motion.div
