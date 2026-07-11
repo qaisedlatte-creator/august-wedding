@@ -57,7 +57,7 @@ function Dot() {
   return (
     <motion.span
       className="font-cormorant self-center pb-5"
-      style={{ fontSize: 'clamp(1.2rem, 3vw, 1.8rem)', color: 'rgba(184,144,42,0.45)' }}
+      style={{ fontSize: 'clamp(1.2rem, 3vw, 1.8rem)', color: '#8B6F1E' }}
       animate={{ opacity: [0.45, 0.85, 0.45] }}
       transition={{ duration: 1, repeat: Infinity }}
     >:</motion.span>

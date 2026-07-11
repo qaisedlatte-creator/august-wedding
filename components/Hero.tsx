@@ -50,13 +50,13 @@ export default function Hero() {
           Together with our families joyfully invite you to celebrate our Wedding
         </motion.p>
 
-        {/* Groom name */}
+        {/* Bride name */}
         <motion.h1
           variants={heroItem}
           className="font-playfair italic font-light leading-none"
           style={{ fontSize: 'clamp(3rem, 11vw, 5rem)', color: '#3D0A0A', letterSpacing: '-0.01em' }}
         >
-          Unais
+          Nasma
         </motion.h1>
 
         {/* Ampersand with lines */}
@@ -66,13 +66,13 @@ export default function Hero() {
           <div className="h-px flex-1" style={{ background: 'linear-gradient(to left, transparent, rgba(139,26,26,0.3))' }}/>
         </motion.div>
 
-        {/* Bride name */}
+        {/* Groom name */}
         <motion.h1
           variants={heroItem}
           className="font-playfair italic font-light leading-none"
           style={{ fontSize: 'clamp(3rem, 11vw, 5rem)', color: '#3D0A0A', letterSpacing: '-0.01em' }}
         >
-          Nasma
+          Unais
         </motion.h1>
 
         {/* Bottom line */}

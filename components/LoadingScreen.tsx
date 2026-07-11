@@ -61,7 +61,7 @@ function WaxSeal() {
           textShadow: '0 1px 4px rgba(45,5,5,0.4)',
         }}
       >
-        U &amp; N
+        N &amp; U
       </span>
     </div>
   )
@@ -140,7 +140,7 @@ export default function LoadingScreen({ onComplete }: Props) {
                 fontSize: 'clamp(0.55rem, 1.8vw, 0.65rem)',
                 letterSpacing: '0.42em',
                 textTransform: 'uppercase',
-                color: 'rgba(184,144,42,0.8)',
+                color: '#8B6F1E',
                 fontWeight: 300,
                 marginBottom: '0.6rem',
               }}
@@ -157,7 +157,7 @@ export default function LoadingScreen({ onComplete }: Props) {
                 textShadow: '0 2px 12px rgba(107,17,17,0.15)',
               }}
             >
-              Unais &amp; Nasma
+              Nasma &amp; Unais
             </h1>
 
             <p

@@ -28,15 +28,15 @@ export default function Footer() {
           </motion.p>
 
           <motion.p variants={fadeUp} className="font-cormorant" style={{ fontSize: 'clamp(1.3rem, 4vw, 2rem)', color: '#3D0A0A', fontWeight: 400 }}>
-            Unais Ibrahim C.K
+            Nasma Sherin V
           </motion.p>
 
           <motion.div variants={fadeUp} className="my-3">
-            <span className="font-vibes" style={{ fontSize: 'clamp(2.2rem, 5.5vw, 3rem)', color: '#B8902A' }}>&amp;</span>
+            <span className="font-vibes" style={{ fontSize: 'clamp(2.2rem, 5.5vw, 3rem)', color: '#8B6F1E' }}>&amp;</span>
           </motion.div>
 
           <motion.p variants={fadeUp} className="font-cormorant" style={{ fontSize: 'clamp(1.3rem, 4vw, 2rem)', color: '#3D0A0A', fontWeight: 400 }}>
-            Nasma Sherin V
+            Unais Ibrahim C.K
           </motion.p>
 
           <motion.div variants={fadeUp} className="flex items-center justify-center gap-3 my-8">

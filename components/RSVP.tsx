@@ -134,7 +134,7 @@ export default function RSVP() {
               <p className="font-cormorant leading-relaxed" style={{ fontSize: '1.1rem', color: 'rgba(74,10,10,0.7)' }}>
                 We are overjoyed that you'll be celebrating this blessed occasion with us. Your presence is our greatest gift.
               </p>
-              <div className="mt-9 font-vibes" style={{ fontSize: '2.5rem', color: '#C9A84C' }}>
+              <div className="mt-9 font-vibes" style={{ fontSize: '2.5rem', color: '#8B6F1E' }}>
                 Unais &amp; Nasma
               </div>
             </motion.div>
@@ -175,7 +175,7 @@ export default function RSVP() {
                     className="wedding-input w-full px-4 py-3.5"
                   />
                   {errors.name && (
-                    <p className="mt-1.5 font-cormorant text-sm" style={{ color: '#C9A84C' }}>
+                    <p className="mt-1.5 font-cormorant text-sm" style={{ color: '#8B1A1A' }}>
                       {errors.name}
                     </p>
                   )}

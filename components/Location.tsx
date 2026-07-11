@@ -58,9 +58,13 @@ export default function Location() {
                 Find Us Here
               </motion.p>
 
-              <motion.h3 variants={fadeUp} className="font-cormorant mb-2" style={{ fontSize: 'clamp(1.4rem, 3.5vw, 1.9rem)', color: '#3D0A0A', fontWeight: 400 }}>
+              <motion.h3 variants={fadeUp} className="font-cormorant mb-1" style={{ fontSize: 'clamp(1.4rem, 3.5vw, 1.9rem)', color: '#3D0A0A', fontWeight: 400 }}>
                 Wedding Venue
               </motion.h3>
+
+              <motion.p variants={fadeUp} className="font-playfair font-semibold mb-1" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.2rem)', color: '#5C0E0E' }}>
+                Safa Convention Centre, Nellikuth
+              </motion.p>
 
               <motion.p variants={fadeUp} className="font-playfair italic mb-7" style={{ fontSize: '0.88rem', color: 'rgba(61,10,10,0.5)' }}>
                 Sunday, 9 August 2026 · Kerala, India

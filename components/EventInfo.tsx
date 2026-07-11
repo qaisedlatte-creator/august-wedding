@@ -46,19 +46,15 @@ export default function EventInfo() {
               <MosqueIcon />
             </motion.div>
 
-            <motion.h3 variants={fadeUp} className="font-cormorant mb-8" style={{ fontSize: 'clamp(1.4rem, 4vw, 2rem)', color: '#3D0A0A', fontWeight: 400 }}>
-              Wedding &amp; Walima Reception
-            </motion.h3>
-
             <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               <div className="text-center">
-                <p className="font-inter tracking-[0.22em] text-xs uppercase mb-3" style={{ color: 'rgba(184,144,42,0.65)', fontWeight: 300 }}>Date</p>
+                <p className="font-inter tracking-[0.22em] text-xs uppercase mb-3" style={{ color: '#8B6F1E', fontWeight: 300 }}>Date</p>
                 <p className="font-playfair italic" style={{ fontSize: 'clamp(1.1rem, 3vw, 1.4rem)', color: '#3D0A0A' }}>Sunday</p>
                 <p className="font-playfair italic" style={{ fontSize: 'clamp(2rem, 5vw, 2.8rem)', color: '#8B1A1A' }}>9 August</p>
                 <p className="font-playfair" style={{ fontSize: 'clamp(1.1rem, 3vw, 1.4rem)', color: '#3D0A0A' }}>2026</p>
               </div>
               <div className="text-center">
-                <p className="font-inter tracking-[0.22em] text-xs uppercase mb-3" style={{ color: 'rgba(184,144,42,0.65)', fontWeight: 300 }}>Time</p>
+                <p className="font-inter tracking-[0.22em] text-xs uppercase mb-3" style={{ color: '#8B6F1E', fontWeight: 300 }}>Time</p>
                 <p className="font-playfair italic" style={{ fontSize: 'clamp(2rem, 5vw, 2.8rem)', color: '#8B1A1A' }}>11:00 AM</p>
                 <p className="font-playfair italic my-1" style={{ fontSize: '0.85rem', color: 'rgba(61,10,10,0.38)' }}>to</p>
                 <p className="font-playfair italic" style={{ fontSize: 'clamp(2rem, 5vw, 2.8rem)', color: '#8B1A1A' }}>2:30 PM</p>

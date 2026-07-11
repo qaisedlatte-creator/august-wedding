@@ -127,17 +127,55 @@ body {
   }
 }
 
-/* ─── Rose Petal Fall (CSS-only, GPU composited) ─── */
+/* ─── Rose Petal Fall — three decoupled GPU layers ─── */
+
+/* Layer 1: vertical fall + horizontal drift */
 @keyframes petal-fall {
-  0%   { transform: translateY(-6vh) translateX(0px) rotate(0deg); opacity: 0; }
-  7%   { opacity: 0.9; }
-  88%  { opacity: 0.55; }
-  100% { transform: translateY(110vh) translateX(var(--petal-drift, 50px)) rotate(var(--petal-spin, 360deg)); opacity: 0; }
+  0%   { transform: translateY(-8vh)  translateX(0px); }
+  100% { transform: translateY(115vh) translateX(var(--petal-drift, 60px)); }
 }
 
-.petal {
-  will-change: transform;
-  animation: petal-fall var(--petal-dur, 12s) var(--petal-delay, 0s) infinite linear;
+/* Layer 2: slow pendulum sway */
+@keyframes petal-sway {
+  0%   { transform: translateX(0px); }
+  50%  { transform: translateX(var(--petal-sway, 25px)); }
+  100% { transform: translateX(0px); }
+}
+
+/* Layer 3: continuous 3-D tumble with perspective baked in */
+@keyframes petal-flutter {
+  0%   { transform: perspective(350px) rotateX(0deg)  rotateY(0deg)  rotateZ(0deg); }
+  25%  { transform: perspective(350px) rotateX(40deg)  rotateY(-20deg) rotateZ(90deg); }
+  50%  { transform: perspective(350px) rotateX(15deg)  rotateY(65deg)  rotateZ(180deg); }
+  75%  { transform: perspective(350px) rotateX(55deg)  rotateY(25deg)  rotateZ(270deg); }
+  100% { transform: perspective(350px) rotateX(0deg)  rotateY(0deg)  rotateZ(360deg); }
+}
+
+/* Petals — fade out as user scrolls past hero */
+.petal-overlay-wrap {
+  opacity: var(--petals-opacity, 1);
+  transition: opacity 0.4s ease-out;
+}
+
+/* Wedding background — scroll-driven progressive blur */
+.wedding-bg-img {
+  filter: blur(var(--scroll-blur, 0px)) brightness(var(--scroll-dim, 1));
+  transition: filter 0.25s ease-out;
+  /* Portrait image: anchor to top so the arch shows on both mobile & desktop */
+  object-position: center 12% !important;
+}
+
+/* On true mobile portrait the image fills perfectly; no override needed */
+@media (max-width: 767px) {
+  .wedding-bg-img {
+    object-position: center top !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wedding-bg-img {
+    filter: none !important;
+  }
 }
 
 /* ─── Keyframes ─── */

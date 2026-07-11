@@ -85,7 +85,7 @@ export default function WeddingGallery() {
           <motion.p
             variants={fadeUp}
             className="font-cormorant tracking-[0.32em] text-xs uppercase mb-4"
-            style={{ color: '#C9A84C' }}
+            style={{ color: '#8B6F1E' }}
           >
             A Day to Remember
           </motion.p>

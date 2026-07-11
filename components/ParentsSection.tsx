@@ -37,7 +37,7 @@ function ParentCard({ role, name, relation, parent1, parent2, slideVariant }: Ca
       <div className="absolute bottom-4 left-4 w-5 h-5 border-b border-l" style={{ borderColor: 'rgba(184,144,42,0.35)' }} />
       <div className="absolute bottom-4 right-4 w-5 h-5 border-b border-r" style={{ borderColor: 'rgba(184,144,42,0.35)' }} />
 
-      <p className="font-inter tracking-[0.32em] text-xs uppercase mb-4" style={{ color: 'rgba(184,144,42,0.75)', fontWeight: 300 }}>
+      <p className="font-inter tracking-[0.32em] text-xs uppercase mb-4" style={{ color: '#8B6F1E', fontWeight: 300 }}>
         {role}
       </p>
       <h3 className="font-cormorant" style={{ fontSize: 'clamp(1.2rem, 3vw, 1.65rem)', color: '#3D0A0A', fontWeight: 400 }}>
@@ -50,7 +50,7 @@ function ParentCard({ role, name, relation, parent1, parent2, slideVariant }: Ca
       <p className="font-playfair" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.2rem)', color: '#5C0E0E' }}>
         {parent1}
       </p>
-      <p className="font-vibes text-2xl my-1" style={{ color: 'rgba(184,144,42,0.65)' }}>&amp;</p>
+      <p className="font-vibes text-2xl my-1" style={{ color: '#8B6F1E' }}>&amp;</p>
       <p className="font-playfair" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.2rem)', color: '#5C0E0E' }}>
         {parent2}
       </p>
@@ -66,7 +66,7 @@ function SectionHeader({ label, title }: { label: string; title: string }) {
         <div className="w-2 h-2 rotate-45" style={{ background: '#B8902A', opacity: 0.5 }} />
         <div className="h-px w-14" style={{ background: 'linear-gradient(to left, transparent, rgba(184,144,42,0.45))' }} />
       </motion.div>
-      <motion.p variants={fadeUp} className="font-inter tracking-[0.32em] text-xs uppercase mb-3" style={{ color: 'rgba(184,144,42,0.7)', fontWeight: 300 }}>
+      <motion.p variants={fadeUp} className="font-inter tracking-[0.32em] text-xs uppercase mb-3" style={{ color: '#8B6F1E', fontWeight: 400 }}>
         {label}
       </motion.p>
       <motion.h2 variants={fadeUp} className="font-cormorant" style={{ fontSize: 'clamp(1.9rem, 5.5vw, 3rem)', color: '#3D0A0A', fontWeight: 400 }}>
@@ -87,19 +87,19 @@ export default function ParentsSection() {
         <SectionHeader label="With the Blessings of" title="Our Beloved Families" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <ParentCard
-            role="The Groom"
-            name="Unais Ibrahim C.K"
-            relation="Son of"
-            parent1="Ibrahim Ali C.K"
-            parent2="Saifunnisa"
-            slideVariant={slideLeft}
-          />
-          <ParentCard
             role="The Bride"
             name="Nasma Sherin V"
             relation="Daughter of"
             parent1="Nishar Babu V"
             parent2="Sameera"
+            slideVariant={slideLeft}
+          />
+          <ParentCard
+            role="The Groom"
+            name="Unais Ibrahim C.K"
+            relation="Son of"
+            parent1="Ibrahim Ali C.K"
+            parent2="Saifunnisa"
             slideVariant={slideRight}
           />
         </div>

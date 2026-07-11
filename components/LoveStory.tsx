@@ -40,8 +40,8 @@ export default function LoveStory() {
           </motion.blockquote>
 
           <motion.div variants={fadeUp} className="mt-8">
-            <span className="font-vibes" style={{ fontSize: 'clamp(2.2rem, 5.5vw, 3rem)', color: '#B8902A' }}>
-              Unais &amp; Nasma
+            <span className="font-vibes" style={{ fontSize: 'clamp(2.2rem, 5.5vw, 3rem)', color: '#8B6F1E' }}>
+              Nasma &amp; Unais
             </span>
           </motion.div>
 
