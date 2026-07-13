@@ -94,7 +94,7 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1.5"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2"
         animate={{ y: [0, 7, 0] }}
         transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
       >
@@ -106,6 +106,9 @@ export default function Hero() {
             transition={{ duration: 1.6, repeat: Infinity }}
           />
         </div>
+        <svg width="14" height="8" viewBox="0 0 20 12" fill="none">
+          <path d="M1 1L10 10L19 1" stroke="rgba(139,26,26,0.5)" strokeWidth="1.6" strokeLinecap="round"/>
+        </svg>
       </motion.div>
     </section>
   )

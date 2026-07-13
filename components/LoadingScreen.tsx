@@ -309,7 +309,7 @@ export default function LoadingScreen({ onComplete }: Props) {
                     fontSize: 'clamp(0.6rem, 2vw, 0.72rem)',
                     letterSpacing: '0.42em',
                     textTransform: 'uppercase',
-                    color: 'rgba(61,10,10,0.5)',
+                    color: 'rgba(61,10,10,0.75)',
                     fontWeight: 300,
                   }}
                 >
