@@ -94,20 +94,26 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2"
-        animate={{ y: [0, 7, 0] }}
+        className="absolute bottom-16 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2.5"
+        animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
       >
-        <div className="w-4 h-7 rounded-full border flex justify-center pt-1" style={{ borderColor: 'rgba(139,26,26,0.35)' }}>
+        <span
+          className="font-inter uppercase"
+          style={{ fontSize: '0.62rem', color: '#8B1A1A', fontWeight: 500, opacity: 0.85, letterSpacing: '0.35em', marginRight: '-0.35em' }}
+        >
+          Scroll
+        </span>
+        <div className="w-6 h-10 rounded-full border-2 flex justify-center pt-1.5" style={{ borderColor: 'rgba(139,26,26,0.6)' }}>
           <motion.div
-            className="w-0.5 rounded-full"
-            style={{ background: '#8B1A1A', height: '8px' }}
-            animate={{ opacity: [1, 0.25, 1] }}
+            className="w-1 rounded-full"
+            style={{ background: '#8B1A1A', height: '10px' }}
+            animate={{ opacity: [1, 0.2, 1], y: [0, 6, 0] }}
             transition={{ duration: 1.6, repeat: Infinity }}
           />
         </div>
-        <svg width="14" height="8" viewBox="0 0 20 12" fill="none">
-          <path d="M1 1L10 10L19 1" stroke="rgba(139,26,26,0.5)" strokeWidth="1.6" strokeLinecap="round"/>
+        <svg width="20" height="11" viewBox="0 0 20 12" fill="none">
+          <path d="M1 1L10 10L19 1" stroke="#8B1A1A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.75"/>
         </svg>
       </motion.div>
     </section>

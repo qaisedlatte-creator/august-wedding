@@ -165,10 +165,20 @@ body {
   object-position: center 12% !important;
 }
 
-/* On true mobile portrait the image fills perfectly; no override needed */
+/* On true mobile portrait, nudge the crop right so the couple illustration
+   (positioned toward the right of the source art) sits closer to center */
 @media (max-width: 767px) {
   .wedding-bg-img {
-    object-position: center top !important;
+    object-position: 68% top !important;
+  }
+}
+
+/* Tablet / small-laptop portrait windows show the full image width (no
+   horizontal crop from object-fit alone), so a slight over-zoom + shift is
+   needed to pull the couple illustration toward center */
+@media (min-width: 768px) and (max-width: 1100px) and (max-aspect-ratio: 4/3) {
+  .wedding-bg-img {
+    transform: scale(1.06) translateX(-3%);
   }
 }
 
