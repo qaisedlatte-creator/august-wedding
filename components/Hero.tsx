@@ -94,19 +94,26 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2"
-        animate={{ y: [0, 7, 0] }}
+        className="absolute bottom-24 z-20 flex flex-col items-center gap-1.5"
+        style={{ left: '50%', x: '-50%' }}
+        animate={{ y: [0, 6, 0] }}
         transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
       >
-        <div className="w-4 h-7 rounded-full border flex justify-center pt-1" style={{ borderColor: 'rgba(139,26,26,0.35)' }}>
+        <span
+          className="font-inter tracking-[0.35em] uppercase"
+          style={{ fontSize: '0.55rem', color: 'rgba(139,26,26,0.55)', fontWeight: 300 }}
+        >
+          Scroll
+        </span>
+        <div className="w-3.5 h-6 rounded-full border flex justify-center pt-1" style={{ borderColor: 'rgba(139,26,26,0.35)' }}>
           <motion.div
             className="w-0.5 rounded-full"
-            style={{ background: '#8B1A1A', height: '8px' }}
+            style={{ background: '#8B1A1A', height: '6px' }}
             animate={{ opacity: [1, 0.25, 1] }}
             transition={{ duration: 1.6, repeat: Infinity }}
           />
         </div>
-        <svg width="14" height="8" viewBox="0 0 20 12" fill="none">
+        <svg width="12" height="7" viewBox="0 0 20 12" fill="none">
           <path d="M1 1L10 10L19 1" stroke="rgba(139,26,26,0.5)" strokeWidth="1.6" strokeLinecap="round"/>
         </svg>
       </motion.div>
