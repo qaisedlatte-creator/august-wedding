@@ -169,7 +169,8 @@ body {
    (positioned toward the right of the source art) sits closer to center */
 @media (max-width: 767px) {
   .wedding-bg-img {
-    object-position: 68% top !important;
+    object-position: center top !important;
+    transform: scale(1.16) translateX(-9%);
   }
 }
 
@@ -178,7 +179,7 @@ body {
    needed to pull the couple illustration toward center */
 @media (min-width: 768px) and (max-width: 1100px) and (max-aspect-ratio: 4/3) {
   .wedding-bg-img {
-    transform: scale(1.06) translateX(-3%);
+    transform: scale(1.12) translateX(-6%);
   }
 }
 

@@ -94,13 +94,13 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-16 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2.5"
+        className="absolute bottom-16 inset-x-0 mx-auto w-fit z-20 flex flex-col items-center gap-2.5"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
       >
         <span
           className="font-inter uppercase"
-          style={{ fontSize: '0.62rem', color: '#8B1A1A', fontWeight: 500, opacity: 0.85, letterSpacing: '0.35em', marginRight: '-0.35em' }}
+          style={{ fontSize: '0.62rem', color: '#8B1A1A', fontWeight: 500, opacity: 0.85, letterSpacing: '0.35em' }}
         >
           Scroll
         </span>
